@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>جزئیات {{ object }}</h1>
+<p>{{ object }}</p>
+<a href="{% url app_label|add:':'|add:model_lower|add:'_update' object.pk %}">ویرایش</a>
+<a href="{% url app_label|add:':'|add:model_lower|add:'_delete' object.pk %}">حذف</a>
+{% endblock %}
